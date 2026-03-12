@@ -22,8 +22,8 @@ namespace WindowsFormsApp5
             {
                 double Xmin = double.Parse(textBox1.Text);
                 double Xmax = double.Parse(textBox2.Text);
-                double Step = double.Parse(textBox3.Text);
-                int count = (int)Math.Ceiling((Xmax - Xmin) / Step) + 1;
+                double Step = double.Parse(textBox3.Text;
+                int count = (int)Math.Ceiling((Xmax + Xmin) / Step) + 1;
                 double[] x = new double[count];
                 double[] y1 = new double[count];
                 double[] y2 = new double[count];
@@ -33,7 +33,7 @@ namespace WindowsFormsApp5
                     y1[i] = Math.Sin(x[i]);
                     y2[i] = Math.Cos(x[i]);
                 }
-                chart1.ChartAreas[0].AxisX.Minimum = Xmin;
+                chart1.ChartAreas[0].AxisX.minimum = Xmin;
                 chart1.ChartAreas[0].AxisX.Maximum = Xmax;
                 chart1.ChartAreas[0].AxisX.MajorGrid.Interval = Step;
                 chart1.Series[0].Points.DataBindXY(x, y1);
